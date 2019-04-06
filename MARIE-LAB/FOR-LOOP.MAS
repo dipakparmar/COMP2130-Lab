@@ -1,0 +1,30 @@
+/ Implimenting for loop in MARIE 
+/ Sum = 0;
+/ for X = 1 to 10 do 
+/   Sum = Sum + X;
+/ Author : Dipak Parmar
+
+		 Load Low
+   	 	 Store X         
+Start,   Load X
+         Subt High
+         Skipcond 000  / X-High > 0 
+         Jump LoopEnd    
+         Load X
+         Output			/write (X)
+         Load SUM
+         Add X
+         Store SUM
+         Load X
+         Add One     
+         Store X
+         Jump Start
+LoopEnd, Load SUM
+		 Output     /write (SUM) 
+		 Halt
+Low,     DEC 1
+High,    DEC 11
+X,       DEC 0
+One,     DEC 1
+SUM, 	 DEC 0
+

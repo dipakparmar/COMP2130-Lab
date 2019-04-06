@@ -1,0 +1,41 @@
+/ Implimenting follwing function in MARIE 
+/ z = someFunction(a, b);
+/ int someFunction(int x, int y)
+/ {  return  3 * x – 2 * y;   }
+/ Author : Dipak Parmar
+
+
+
+			  Input
+			  Store A
+			  Input
+			  Store B
+              JnS someFunction
+              Store Z
+              Output
+              Halt
+someFunction, HEX 0
+			  Load A
+              Store X
+              Output
+              Add X
+              Add X             
+              Output
+              Store Temp1
+              Load B
+              Store Y
+              Output
+              Add Y
+              Output
+              Store Temp2
+              Load Temp1
+              Subt Temp2
+              JumpI someFunction
+              
+A, DEC 0
+B, DEC 0
+Temp1, DEC 0
+Temp2, DEC 0
+X, DEC 0
+Y, DEC 0
+Z, DEC 0
